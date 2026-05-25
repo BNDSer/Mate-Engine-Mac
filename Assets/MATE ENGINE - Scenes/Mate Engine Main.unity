@@ -3515,7 +3515,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deleteButton: {fileID: 131839740}
-  fileName: ZomeAI
 --- !u!1 &136332072
 GameObject:
   m_ObjectHideFlags: 0
@@ -33240,7 +33239,7 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 1, g: 0.26999998, b: 0.96203995, a: 1}
-  m_Intensity: 2.7887703e-29
+  m_Intensity: 2.651643e-29
   m_Range: 0.5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -75623,7 +75622,7 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 0, g: 0.44799995, b: 1, a: 1}
-  m_Intensity: 5.5775407e-29
+  m_Intensity: 5.303286e-29
   m_Range: 1
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -99576,7 +99575,7 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 0, g: 0.44799995, b: 1, a: 1}
-  m_Intensity: 4.1831553e-29
+  m_Intensity: 3.9774642e-29
   m_Range: 1
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -159589,7 +159588,8 @@ MonoBehaviour:
   roundedSprite16: {fileID: 21300000, guid: 7f5b8d8ec16099b49a0d8a41bf746138, type: 3}
   roundedSprite32: {fileID: 21300000, guid: 7f5b8d8ec16099b49a0d8a41bf746138, type: 3}
   roundedSprite64: {fileID: 21300000, guid: 7f5b8d8ec16099b49a0d8a41bf746138, type: 3}
-  llmCharacter: {fileID: 7063969291654908835}
+  llmCharacter: {fileID: 7960823410904586874}
+  ttsHandler: {fileID: 7960823410904586873}
   inputPlaceholder: Talk to me!
   streamAudioSource: {fileID: 1197370323}
   playerMaterial: {fileID: 2100000, guid: cee35382f7f30a849836e533c6880e91, type: 2}
@@ -253297,12 +253297,29 @@ MonoBehaviour:
     contextLength: 4096
     enableHusbandoMode: 0
     enableAutoMemoryTrim: 0
+    llmBaseUrl: 
+    llmAuthToken: 
+    llmModel: claude-sonnet-4-6
+    llmSystemPrompt: "\u4F60\u662F\u4E00\u4E2A\u7B80\u6D01\u3001\u81EA\u7136\u7684\u5BF9\u8BDD\u52A9\u624B\u3002\u56DE\u7B54\u5C3D\u91CF\u76F4\u63A5\u3001\u6E05\u695A\uFF0C\u9002\u5408\u6717\u8BFB\u3002"
+    llmMaxMessages: 20
+    llmMaxTokens: 1024
+    ttsApiUrl: http://127.0.0.1:9880/tts
+    ttsRefAudioPath: 
+    ttsPromptText: 
+    ttsPromptLang: ja
+    ttsTextLang: ja
+    ttsTopK: 15
+    ttsTopP: 1
+    ttsTemperature: 1
+    ttsTextSplitMethod: cut0
+    ttsEnabled: 0
     settingsVersion: 0
     alarmsEnabled: 1
     enableMinecraftMessages: 0
     selectedParticleTheme: Standard
     enableFeedSystem: 0
     enableRandomAvatar: 0
+    enableLocomotion: 0
     alarms: []
     timers: []
 --- !u!1 &6901646575481116606
@@ -255919,7 +255936,7 @@ MonoBehaviour:
     groupID: ambi_lights
     exclusiveTags:
     - lights
-    fadeCurrentValue: 1.3943852e-29
+    fadeCurrentValue: 1.3258215e-29
     fadeTarget: 0
     isFading: 1
     hasYSet: 0
@@ -255943,7 +255960,7 @@ MonoBehaviour:
     groupID: ambi_lights
     exclusiveTags:
     - lights
-    fadeCurrentValue: 1.3943852e-29
+    fadeCurrentValue: 1.3258215e-29
     fadeTarget: 0
     isFading: 1
     hasYSet: 0
@@ -255967,7 +255984,7 @@ MonoBehaviour:
     groupID: ambi_lights
     exclusiveTags:
     - lights
-    fadeCurrentValue: 1.3943852e-29
+    fadeCurrentValue: 1.3258215e-29
     fadeTarget: 0
     isFading: 1
     hasYSet: 0
@@ -261004,6 +261021,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2502733926385258299}
   - component: {fileID: 7063969291654908835}
+  - component: {fileID: 7960823410904586874}
+  - component: {fileID: 7960823410904586873}
   m_Layer: 0
   m_Name: LLMCharacter
   m_TagString: Untagged
@@ -261011,6 +261030,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7960823410904586873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7960823410904586872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f2e2b126553c4f8eaad08b23c5598f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SoVITSTTSHandler
+  audioSource: {fileID: 0}
+--- !u!114 &7960823410904586874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7960823410904586872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ad92c59a0fe54a3285e9e19a1e81b5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnthropicChatHandler
 --- !u!1 &7968073100083459384
 GameObject:
   m_ObjectHideFlags: 0
@@ -271258,14 +271302,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   graphicsDropdown: {fileID: 4741053007736804576}
-  contextLengthDropdown: {fileID: 1470580899}
   particleDropdown: {fileID: 95275001}
   particleThemes:
   - id: Standard
     display: STANDARD
   - id: Galaxy
     display: GALAXY
-  llm: {fileID: 8017896322329334834}
+  llmBaseUrlInput: {fileID: 0}
+  llmAuthTokenInput: {fileID: 0}
+  llmModelInput: {fileID: 0}
+  llmMaxMessagesInput: {fileID: 0}
+  llmMaxTokensInput: {fileID: 0}
+  ttsApiUrlInput: {fileID: 0}
+  ttsRefAudioPathInput: {fileID: 0}
+  ttsPromptTextInput: {fileID: 0}
+  ttsPromptLangInput: {fileID: 0}
+  ttsTextLangInput: {fileID: 0}
+  ttsTopKInput: {fileID: 0}
+  ttsTopPInput: {fileID: 0}
+  ttsTemperatureInput: {fileID: 0}
+  ttsTextSplitMethodInput: {fileID: 0}
+  ttsEnabledToggle: {fileID: 0}
 --- !u!114 &8536052333486738853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271296,6 +271353,7 @@ MonoBehaviour:
   enableMinecraftMessagesToggle: {fileID: 1967671819}
   enableFeedSystemToggle: {fileID: 234303502}
   enableRandomAvatarToggle: {fileID: 269300858}
+  enableLocomotionToggle: {fileID: 0}
   bloomObject: {fileID: 147272346}
   dayNightObject: {fileID: 1221425058}
   ambientOcclusionObject: {fileID: 1794725911}
@@ -277852,7 +277910,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   input: {fileID: 1266615637}
-  target: {fileID: 7063969291654908835}
+  target: {fileID: 0}
   liveSave: 1
 --- !u!114 &8781290039782434141
 MonoBehaviour:
