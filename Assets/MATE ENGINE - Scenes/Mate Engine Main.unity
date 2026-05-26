@@ -119327,7 +119327,7 @@ MonoBehaviour:
   totalIdleAnimations: 20
   IDLE_SWITCH_TIME: 10
   IDLE_TRANSITION_TIME: 1
-  DANCE_CLIP_COUNT: 14
+  DANCE_CLIP_COUNT: 5
   enableDancing: 1
   enableDanceSwitch: 0
   DANCE_SWITCH_TIME: 15
@@ -164191,7 +164191,7 @@ MonoBehaviour:
   totalIdleAnimations: 20
   IDLE_SWITCH_TIME: 10
   IDLE_TRANSITION_TIME: 1
-  DANCE_CLIP_COUNT: 14
+  DANCE_CLIP_COUNT: 5
   enableDancing: 1
   enableDanceSwitch: 0
   DANCE_SWITCH_TIME: 15
